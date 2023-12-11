@@ -60,7 +60,7 @@ public class Pila<T> {
             System.out.println("4. MOSTRAR ELEMENTOS DE LA PILA ");
             System.out.println("5. TAMAÑO DE LA PILA ");
             System.out.println("6. ¿LA PILA ESTÁ VACÍA? ");
-            System.out.println("0. SALIR ");
+            System.out.println("7. SALIR ");
             System.out.print("INGRESE SU OPCIÓN: ");
             opcion = scanner.nextInt();
 
@@ -97,7 +97,7 @@ public class Pila<T> {
                     System.out.println("¿LA PILA ESTÁ VACÍA? " + pila.estaVacia());
                     break;
 
-                case 0:
+                case 7:
                     System.out.println("SALIENDO DEL PROGRAMA...");
                     break;
 
@@ -105,7 +105,7 @@ public class Pila<T> {
                     System.out.println("OPCION INNVALIDA, INTENTE NUEVAMENTE.");
                     break;
             }
-        } while (opcion != 0);
+        } while (opcion != 7);
 
         scanner.close();
     }
