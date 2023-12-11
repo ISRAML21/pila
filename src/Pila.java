@@ -16,7 +16,7 @@ public class Pila<T> {
         if (!pila.isEmpty()) {
             return pila.pop();
         } else {
-            System.out.println("La pila está vacía.");
+            System.out.println("LA PILA ESTÁ VACÍA.");
             return null;
         }
     }
@@ -25,16 +25,16 @@ public class Pila<T> {
         if (!pila.isEmpty()) {
             return pila.peek();
         } else {
-            System.out.println("La pila está vacía.");
+            System.out.println("LA PILA ESTÁ VACÍA.");
             return null;
         }
     }
 
     public void mostrarElementos() {
         if (!pila.isEmpty()) {
-            System.out.println("Elementos de la pila: " + pila);
+            System.out.println("ELEMETOS DE LA PILA: " + pila);
         } else {
-            System.out.println("La pila está vacía.");
+            System.out.println("LA PILA ESTÁ VACÍA.");
         }
     }
 
@@ -53,20 +53,20 @@ public class Pila<T> {
         int opcion;
 
         do {
-            System.out.println("\n=== Menú de Pila ===");
-            System.out.println("1. Push (Agregar elemento)");
-            System.out.println("2. Pop (Quitar elemento)");
-            System.out.println("3. Peek (Ver elemento superior)");
-            System.out.println("4. Mostrar elementos de la pila");
-            System.out.println("5. Tamaño de la pila");
-            System.out.println("6. ¿La pila está vacía?");
-            System.out.println("0. Salir");
-            System.out.print("Ingrese su opción: ");
+            System.out.println("\n--- Menú de Pila ---");
+            System.out.println("1. AGREGAR ELEMENTO (Push) ");
+            System.out.println("2. QUITAR ELEMENTO (Pop) ");
+            System.out.println("3. VER ELEMENTO SUPERIOR (Peek) ");
+            System.out.println("4. MOSTRAR ELEMENTOS DE LA PILA ");
+            System.out.println("5. TAMAÑO DE LA PILA ");
+            System.out.println("6. ¿LA PILA ESTÁ VACÍA? ");
+            System.out.println("0. SALIR ");
+            System.out.print("INGRESE SU OPCIÓN: ");
             opcion = scanner.nextInt();
 
             switch (opcion) {
                 case 1:
-                    System.out.print("Ingrese el elemento a agregar: ");
+                    System.out.print("INGRESE EL ELEMENTO A AGREGAR: ");
                     int elementoPush = scanner.nextInt();
                     pila.push(elementoPush);
                     break;
@@ -74,14 +74,14 @@ public class Pila<T> {
                 case 2:
                     Integer elementoPop = pila.pop();
                     if (elementoPop != null) {
-                        System.out.println("Elemento removido: " + elementoPop);
+                        System.out.println("ELEMENTO REMOVIDO: " + elementoPop);
                     }
                     break;
 
                 case 3:
                     Integer elementoSuperior = pila.peek();
                     if (elementoSuperior != null) {
-                        System.out.println("Elemento superior: " + elementoSuperior);
+                        System.out.println("ELEMENTO SUPERIOR: " + elementoSuperior);
                     }
                     break;
 
@@ -90,19 +90,19 @@ public class Pila<T> {
                     break;
 
                 case 5:
-                    System.out.println("Tamaño de la pila: " + pila.obtenerTamaño());
+                    System.out.println("TAMAÑO DE LA PILA: " + pila.obtenerTamaño());
                     break;
 
                 case 6:
-                    System.out.println("¿La pila está vacía? " + pila.estaVacia());
+                    System.out.println("¿LA PILA ESTÁ VACÍA? " + pila.estaVacia());
                     break;
 
                 case 0:
-                    System.out.println("Saliendo del programa.");
+                    System.out.println("SALIENDO DEL PROGRAMA...");
                     break;
 
                 default:
-                    System.out.println("Opción no válida. Intente nuevamente.");
+                    System.out.println("OPCION INNVALIDA, INTENTE NUEVAMENTE.");
                     break;
             }
         } while (opcion != 0);
